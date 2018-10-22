@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {StarkPage} from "../stark/stark";
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,14 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  stark = StarkPage;
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  clickStark(){
+    this.navCtrl.push(this.stark);
   }
 
 }
